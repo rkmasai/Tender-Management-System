@@ -20,30 +20,24 @@ public class VenderDaoImpl implements VenderDao{
 		
 		try(Connection conn = DBUtility.provideConnection()) {
 			
-			PreparedStatement ps = conn.prepareStatement("select * from vendor where email = ? AND password = ? ");
+			PreparedStatement ps = conn.prepareStatement("select * from vender where email = ? AND password = ? ");
 			
 			ps.setString(1, username);
 			ps.setString(2, password);
-			
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()) {
-				int i = rs.getInt("id");
+				int i = rs.getInt("vid");
 				String n = rs.getString("name");
 				String a = rs.getString("address");
 				String e = rs.getString("email");
 				String p = rs.getString("password");
-				
-				ven = new Vandor(username, a, e, password);
-				
-				
+				ven = new Vandor(n, a, e, p );			
 			}
-			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			
-			throw new VendorException("Invalid UserName or Password");
 		}
 		
 		
