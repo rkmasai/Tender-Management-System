@@ -2,7 +2,7 @@
 
 ## Tender Management System
 
-
+<img src = "https://github.com/rkmasai/humane-theory-4192/blob/main/image/student_m_s.JPG"/>
 
 Admin can login his username and password.
 
@@ -30,28 +30,29 @@ Git
 
 GitBash
 
-
 Overview of my work
 
 ER Diagram 
-
-
-
 Contract   table linking with Tander and Vendor
 
+<img src="https://github.com/rkmasai/humane-theory-4192/blob/main/image/erdigram.JPG"/>
+
+StartUp InterFace
+<img src = "https://github.com/rkmasai/humane-theory-4192/blob/main/image/startupInface.JPG"/>
 
 
 Admin Login
 
 Admin Can login by Username(admin) and password(password)
-
-
+<img src="https://github.com/rkmasai/humane-theory-4192/blob/main/image/Admin%20Login.JPG"/>
 
 
 Vendor Login 
 
 Vendor can register first if not registered earlier.
 Vendor can login with earlier provided Username and password
+
+
 
 
 
