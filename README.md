@@ -39,7 +39,7 @@ ER Diagram
 
 Contract   table linking with Tander and Vendor
 
-Contract   table linking with Tander and Vendor
+
 
 Admin Login
 
