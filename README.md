@@ -4,7 +4,10 @@
 
 <img src = "https://github.com/rkmasai/humane-theory-4192/blob/main/image/student_m_s.JPG"/>
 
-<h3> Admin can login his username and password. </h3>
+
+<h2> Features </h2>
+
+Admin can login his username and password.
 
 Admin can add Details of Tender,
 
@@ -19,8 +22,7 @@ Vendor can login via username and password.
 vendor can see all tender details. </h4>
 
 
-
-<ul> <h4> Technology Used  </h4></ul>
+<h2> Technology Used  </h2>
 
 <li> Java </li>
 
@@ -30,7 +32,7 @@ vendor can see all tender details. </h4>
 
 <li> GitBash </li>
 
-<h3> Overview of my work </h3>
+<h2> Overview of my work </h2>
 
 <h5> ER Diagram </h5>
 Contract   table linking with Tander and Vendor
