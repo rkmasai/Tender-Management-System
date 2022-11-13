@@ -39,7 +39,7 @@ public class AddVendor {
 			e.printStackTrace();
 		}
 		
-		sc.close();
+		
 	}
 
 }

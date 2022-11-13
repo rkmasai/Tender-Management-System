@@ -25,7 +25,7 @@ public class RemoveTenderBYName {
 			e.printStackTrace();
 		}
 		
-		sc.close();
+		
 	}
 
 }

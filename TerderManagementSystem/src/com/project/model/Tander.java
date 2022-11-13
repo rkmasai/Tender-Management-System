@@ -2,6 +2,11 @@ package com.project.model;
 
 public class Tander {
 	
+	@Override
+	public String toString() {
+		return "Tander [tid=" + tid + ", tnmae=" + tnmae + ", price=" + price + ", place=" + place + ", duration="
+				+ duration + "]";
+	}
 	private int tid;
 	private String tnmae ;
 	private int price;

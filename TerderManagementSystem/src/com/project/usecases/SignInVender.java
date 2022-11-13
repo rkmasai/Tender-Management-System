@@ -22,17 +22,25 @@ public class SignInVender  {
 		VenderDao ven = new VenderDaoImpl();
 		
 		Vandor v = ven.signInVender(username, password);
+		boolean flag = true;
 		
 		if(v!=null) {
-			System.out.println(v.getName());
+			System.out.println("  SingIn Sucessfully   ");
+			System.out.println("Welcome "+v.getName());
+			System.out.println("====================================");
+			System.out.println("||                                ||");
+			System.out.println("|| 1 See All Tender               ||");
+			System.out.println("|| 2 Back                         ||");
+			System.out.println("|| 3 exit                         ||");
+			System.out.println("||                                ||");	
+			System.out.println("=====================================");
+			
 		}
 		else
 		{
 			System.out.println("Please Register First");
-		}
-		
-		
-	
+			flag = false;
+		}	
 	}
 
 }

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.project.exception.TanderException;
+import com.project.exception.VendorException;
 import com.project.model.Tander;
 import com.project.utility.DBUtility;
 
@@ -88,6 +89,46 @@ public class TanderDaoImpl implements TanderDao {
 			throw new TanderException("No Details Found");
 		}
 		return td;
+	}
+
+	@Override
+	public String erollVendorToTander(int id, int tid) throws TanderException, VendorException {
+		String message = "Not Enrolled";
+		
+		try(Connection conn = DBUtility.provideConnection()) {
+			PreparedStatement ps1 = conn.prepareStatement(" select * from vendor where id = ? ");
+		
+		ps1.setInt(1, id);		
+		ResultSet rs = ps1.executeQuery();		
+		if(rs.next()) {			
+			PreparedStatement ps2 = conn.prepareStatement("select * from tander where tid = ? ");
+			ps2.setInt(1, tid);
+		ResultSet rs2 =	ps2.executeQuery();
+		
+		
+		if(rs2.next()) {		
+	PreparedStatement ps3 =	conn.prepareStatement("insert into contract values(?, ?)");		
+	ps3.setInt(1, id);
+	ps3.setInt(2, tid);
+	
+	int x = ps3.executeUpdate();
+	
+	if(x> 0)
+	{
+		message = "vendor Enrolled Sucessfully";
+	}	
+		}else
+		{
+			throw new TanderException("invalid tander  tid =  "+ tid);
+		}	
+	}
+		else
+			throw new VendorException("vendor does not with id "+ id);	
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new TanderException(e.getMessage());
+		}
+		return message;
 	}
 
 }

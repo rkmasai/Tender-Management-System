@@ -20,14 +20,14 @@ public class VenderDaoImpl implements VenderDao{
 		
 		try(Connection conn = DBUtility.provideConnection()) {
 			
-			PreparedStatement ps = conn.prepareStatement("select * from vender where email = ? AND password = ? ");
+			PreparedStatement ps = conn.prepareStatement("select * from vendor where email = ? AND password = ? ");
 			
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()) {
-				int i = rs.getInt("vid");
+				int i = rs.getInt("id");
 				String n = rs.getString("name");
 				String a = rs.getString("address");
 				String e = rs.getString("email");
@@ -39,7 +39,6 @@ public class VenderDaoImpl implements VenderDao{
 			e.printStackTrace();
 			
 		}
-		
 		
 		return ven;
 	}

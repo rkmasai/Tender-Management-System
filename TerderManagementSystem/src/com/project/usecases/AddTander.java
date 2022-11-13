@@ -22,7 +22,7 @@ public class AddTander {
 		System.out.println("Enter Tander Place");
 		String place = sc.next();
 		
-		System.out.println("Enter Course duration");
+		System.out.println("Enter Time duration");
 		String duration = sc.next();
 		
 		TanderDao dao = new TanderDaoImpl();
@@ -37,7 +37,7 @@ public class AddTander {
 		} catch (TanderException e) {
 			e.printStackTrace();
 		}
-		sc.close();
+		
 	}
 	
 	
