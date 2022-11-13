@@ -72,7 +72,7 @@ Contract   table linking with Tander and Vendor
 
 
 
-Contributor
+<h2> Contributor </h2>
 
 Rajni Kant Arya
 
