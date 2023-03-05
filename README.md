@@ -1,6 +1,5 @@
 # humane-theory-4192
 
-## Tender Management System
 
 <img src = "https://github.com/rkmasai/humane-theory-4192/blob/main/image/student_m_s.JPG"/>
 
